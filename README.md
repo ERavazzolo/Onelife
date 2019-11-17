@@ -4,7 +4,7 @@ https://eravazzolo.github.io/Onelife/
 ## Description
 Onelife is personal project featuring a landing page for a self-improvement, health center.
 
-The design for this project was done by me, in collaboration with Rick Veronese. All the content was also written by me.
+The design and content for this project was done by me, in collaboration with designer Rick Veronese. Some feature styles and animations are inspired by designer Jonas Schmedtmann.
 
 OneLife embodies my personal vision of a center based on a positive message of contribution to others through the taking care of oneself first, improving the mental and physical state of people.
 
