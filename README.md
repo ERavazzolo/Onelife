@@ -20,6 +20,10 @@ OneLife embodies my personal vision of a center based on a positive message of c
 - JAVASCRIPT
 - NPM
 
+## Outcome
+Planning and undertaking a personal project stimulated my creativity whilst allowing me to continue practising what I had learned during previous work.
+This led to an improvement of my ability to develop my own workflow, debug my own projects and to experiment with different solutions to a given problem.
+
 ## Run Locally
 - Run `git clone https://github.com/ERavazzolo/Rick-Veronese.git`
 - Run `npm install`
