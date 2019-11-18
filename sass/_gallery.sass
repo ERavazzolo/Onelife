@@ -1,0 +1,142 @@
+//////// GALLERY 
+
+.gallery 
+    padding: 5rem 0 0
+
+    display: grid
+    grid-template-rows: repeat(2, min-content)
+    justify-items: center
+    grid-row-gap: 4rem
+
+    @media only screen and (max-width: $bp-800)
+        padding: 0
+
+    @media only screen and (max-width: $bp-700)
+        padding: 5rem 0 0
+
+
+    &-bg
+        grid-column: 1 / -1
+        grid-row: 2 / -1
+        align-self: end
+
+        width: 100%
+
+        margin-top: 40rem
+        position: relative
+
+        @media only screen and (max-width: $bp-1000)
+            margin-top: 35rem
+
+        @media only screen and (max-width: $bp-600)
+            margin-top: 30rem
+
+        @media only screen and (max-width: $bp-500)
+            margin-top: 25rem
+
+    &__title
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+
+    &-wrapper
+        grid-column: 1 / -1
+        grid-row: 2 / -1
+
+        padding: 1.5rem
+
+        display: grid
+        grid-template-columns: repeat(8, minmax(3rem, 15rem))
+        grid-template-rows: repeat(7, 5vw)
+        grid-gap: 1.5rem
+
+        @media only screen and (max-width: $bp-500)
+            padding: 2.5rem
+
+        & > *
+            display: grid
+            align-items: center
+            justify-items: center
+
+    &__item
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+        &:hover 
+            cursor: pointer
+
+        &:hover .gallery__img 
+            opacity: .15
+            transform: scale(1) 
+
+
+        &:hover .gallery__text > * 
+            transform: scaleY(1)
+
+        &--1
+            grid-column: 1 / span 2
+            grid-row: 1 / span 3
+
+        &--2
+            grid-column: 3 / span 3
+            grid-row: 1 / span 5
+
+        &--3 
+            grid-column: 1 / span 2
+            grid-row: 4 / span 4
+
+        &--4 
+            grid-column: 6 / -1
+            grid-row: 3 / span 3
+
+        &--5 
+            grid-column: 6 / -1
+            grid-row: 1 / span 2
+
+        &--6 
+            grid-column: 3 / span 2
+            grid-row: 6 / span 2
+
+        &--7
+            grid-column: 5 / span 2
+            grid-row: 6 / span 2
+
+        &--8
+            grid-column: 7 / -1
+            grid-row: 6 / span 2
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transform: scale(1.4)
+        transition: all .3s ease-in-out
+
+        grid-column: 1 / -1
+        grid-row: 1 / -1
+
+    &__text 
+        grid-column: 1 / -1
+        grid-row: 1 / -1
+
+        height: 100%
+        width: 100%
+        text-align: center
+        color: $color-grey-dark
+
+        display: grid
+        align-content: center
+
+        & > p 
+            height: 3rem
+            transform: scaleY(0)
+            transition: transform .3s
+
+        & > span 
+            margin-top: 1rem
+            font-size: 2.5rem
+            transform: scaleY(0)
+            transition: transform .4s ease-in
+
+            @media only screen and (max-width: $bp-900)
+                display: none

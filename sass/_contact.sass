@@ -1,0 +1,86 @@
+.contact-container
+    display: grid
+    grid-template-rows: 80px
+
+.contact-visual
+    display: grid
+    justify-items: center
+
+    background-color: $color-secondary
+
+.contact    
+    &__section
+        justify-self: center
+        margin: 15rem 0
+        width: 50%
+
+        display: grid
+        grid-row-gap: 6rem
+        justify-content: center
+
+        @media only screen and (max-width: $bp-1200)
+            width: 60%
+
+        @media only screen and (max-width: $bp-900)
+            width: 70%
+
+        @media only screen and (max-width: $bp-500)
+            width: 80%
+
+        @media only screen and (max-width: $bp-400)
+            width: 90%
+
+    &__heading
+        display: grid
+        grid-row-gap: 5rem
+        text-align: center
+        justify-items: center
+
+    &__form
+        display: grid
+        grid-row-gap: 4rem
+
+    &__or
+        margin-top: 4rem
+        display: grid
+        grid-row-gap: 2rem
+
+    &__methods
+        text-align: center
+        list-style-type: none
+    
+    &__icon
+        height: 1.6rem
+        width: 1.6rem
+        fill: $color-white
+        z-index: 2
+
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+
+
+///////////// CONTACT FORM //////////
+.form
+    &__group
+        display: grid
+
+    &__label
+        font-family: $font-default
+        font-size: 1.6rem
+
+    &__input
+        border: 2px solid $color-secondary
+        height: 4rem
+        color: $color-grey-dark
+
+        transition: all .2s ease-in-out
+
+        &:hover,
+        &:active
+            border: 2px solid $color-primary
+    
+    &__textarea
+        height: 25rem
+
+    &__button
+        cursor: pointer

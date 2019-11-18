@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+
+    <title>Contact</title>
+</head>
+
+<body class="contact-container">
+    <div class="contact-visual">
+        <div class="header">
+            <div class="header-wrapper">
+                <a class="logo heading-3--light" href="index.html">OneLife</a>
+                <a href="javascript:void(0);" class="burger-btn" onclick="handleMenu()">
+                    <svg class="burger__icon icon icon-list"><use xlink:href="images/svg/sprite.svg#icon-menu"></use></svg>
+                    <span class="p-tiny p-tiny--light">Menu</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list" id="menu">
+                        <li class="nav__item"><a class="nav__link" href="index.html#about">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#gallery">Gallery</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#journeys">Journeys</a></li>
+                        <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact__section">
+        <div class="contact__heading">
+            <h2 class="heading-2">Something in mind?</h2>
+            <h3 class="heading-3 heading-3--dark">We are here for you! Drop us a message for any questions you may have.</h3>
+        </div>
+        <form action="#" class="contact__form">
+            <div class="form__group">
+                <label for="name" class="form__label p-reg">Your Name (required)</label>
+                <input type="text" name="name" class="form__input" id="name" required>
+            </div>
+            <div class="form__group">
+                <label for="email" class="form__label p-reg">Your Email (required)</label>
+                <input type="text" name="email" class="form__input" id="email" required>
+            </div>
+            <div class="form__group">
+                <label for="subject" class="form__label p-reg">Subject</label>
+                <input type="text" name="Subject" class="form__input" id="subject">
+            </div>
+            <div class="form__group mb-sm">
+                <label for="comment" class="form__label p-reg">Your Message</label>
+                <textarea type="text" name="Message" class="form__input form__textarea" id="comment"></textarea>
+            </div>
+            <button class="btn btn-contact form__button">Send</button>
+        </form>
+        <h3 class="heading-3 heading-3--dark contact__heading">Or you can find us at</h3>
+
+        <ul class="contact__or">
+            <li class="contact__methods">
+                <span class="p-big">project@onelife.com</span>
+            </li>
+    
+        </ul>
+    </section>
+
+
+
+
+
+    <section class="footer">
+        <div class="footer-wrapper">
+            <a class="logo footer__logo" href="#">OneLife</a>
+            <ul class="footer-nav">
+                <li class="footer-nav__item">
+                    <a href="https://www.facebook.com/">
+                        <svg class="footer-nav__icon icon-list"><use xlink:href="images/svg/sprite.svg#icon-facebook-with-circle"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-nav__item">
+                    <a href="https://twitter.com/">
+                        <svg class="footer-nav__icon icon-list"><use xlink:href="images/svg/sprite.svg#icon-instagram-with-circle"></use></svg>
+                    </a>                        
+                </li>
+                <li class="footer-nav__item">
+                    <a href="https://www.instagram.com/">
+                        <svg class="footer-nav__icon icon-list"><use xlink:href="images/svg/sprite.svg#icon-twitter-with-circle"></use></svg>
+                    </a>                        
+                </li>
+                <li class="footer-nav__item">
+                    <a href="https://www.youtube.com/">
+                        <svg class="footer-nav__icon icon-list"><use xlink:href="images/svg/sprite.svg#icon-youtube-with-circle"></use></svg>
+                    </a>                        
+                </li>
+            </ul>
+            <p class="copyright p-tiny p-tiny--light m-left">&copy; Copyright 2019 by Erika Ravazzolo. All Rights Reserved.</p>
+        </div>
+    </section>
+</body>
+</html>

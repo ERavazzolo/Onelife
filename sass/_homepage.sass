@@ -1,0 +1,467 @@
+html, 
+body,
+*,
+*::before,
+*::after 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+html, body 
+    width: 100%
+    overflow-x: hidden
+
+body 
+    width: 100%
+
+////////// MAIN VISUAL
+
+.main-visual
+    height: 100vh
+    background-image: linear-gradient(to right bottom, rgba($color-primary, .6), rgba($color-secondary, .2)), url(../images/site-visual.jpg)
+    background-size: cover
+
+    display: grid
+    grid-template-rows: 80px 1fr    //rows for header and visual/textbox
+    justify-items: center
+
+    @media only screen and (max-width: $bp-700)
+        grid-template-rows: 140px 1fr
+
+    @media only screen and (max-width: $bp-500)
+        grid-template-rows: 80px 1fr
+
+.header
+    grid-row: 1 / 2
+    width: 100vw
+    display: grid
+    justify-items: center
+
+    &-wrapper
+        display: grid
+        grid-template-columns: minmax(10rem, 1fr) 1fr minmax(50rem, 1fr)
+        width: 80%
+
+        @media only screen and (max-width: $bp-700)
+            grid-template-columns: minmax(min-content, 100rem)
+            grid-row-gap: 2rem
+
+        @media only screen and (max-width: $bp-500)
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: 80px min-content
+            grid-row-gap: 0
+            width: 90vw
+
+.logo
+    grid-column: 1 / 2
+    align-self: center
+
+    @media only screen and (max-width: $bp-700)
+        justify-self: center
+        grid-column: 1 / -1
+    
+    @media only screen and (max-width: $bp-500)
+        justify-self: center
+        align-self: center
+        grid-column: 1 / 2
+
+
+// Small screen nav
+.burger
+    &-btn 
+        display: none
+        text-decoration: none
+        text-transform: uppercase        
+
+        @media only screen and (max-width: $bp-500)
+            grid-column: 3 / -1
+            grid-row: 1 / 2
+            justify-self: end
+            align-self: center
+
+            display: grid
+            justify-items: center
+            transition: all 3s ease-in-out
+            padding-right: 1.5rem
+
+    &__icon
+        fill: $color-white
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+
+.responsive
+    display: grid
+    grid-template-columns: repeat(2, 15rem)
+    grid-row-gap: 2rem
+    justify-content: end
+
+/// Desktop nav
+.nav
+    grid-column: 3 / -1
+
+    @media only screen and (max-width: $bp-700)
+        grid-column: 1 / -1
+
+    @media only screen and (max-width: $bp-500)
+        grid-row: 2 / -1
+
+    &__list
+        list-style: none
+
+        display: grid
+        grid-template-columns: repeat(4, minmax(min-content, 1fr))
+        grid-column-gap: 3rem
+        justify-items: center
+
+        @media only screen and (max-width: $bp-500)
+            display: none
+
+    &__item
+        height: 80px    //sets the item as high as header 
+        cursor: pointer
+
+        display: flex
+
+        @media only screen and (max-width: $bp-700)
+            height: 100%
+
+        @media only screen and (max-width: $bp-500)
+            margin-bottom: 1rem
+            justify-content: flex-end
+
+    &__link
+        &,
+        &:link,
+        &:visited
+            align-self: center
+
+            padding: 1rem 1.5rem
+            text-decoration: none
+            color: $color-white
+            border: 1.5px solid transparent
+            font-family: $font-default
+            font-size: 2rem
+            font-weight: 400
+            transition: all .2s ease-in
+
+        &:hover
+            border-bottom: 1.5px solid $color-white
+
+        &:active
+            border: 1.5px solid $color-white
+
+
+
+// Main Visual Message
+.text-box
+    align-self: center
+
+    width: 85vw
+
+    display: grid
+    grid-row-gap: 4rem
+    grid-template-columns: 1fr
+    justify-items: left
+
+    margin-left: 3vw
+
+    &__title
+        font-family: $font-default
+        color: $color-white
+
+        display: grid
+
+        @media only screen and (max-width: $bp-400)
+            font-size: 8rem
+
+    &__btn
+        grid-column: 1 / 2
+
+
+////// PARTNERSHIP
+
+.partners
+    display: grid
+    grid-column: 1fr
+    grid-row: 1fr
+    justify-items: center
+    align-items: center
+
+    margin-top: -5rem
+
+    &-bg 
+        width: 100vw
+        grid-column: 1 / -1
+        grid-row: 1 / -1
+
+    &__text-box
+        grid-column: 1 / -1
+        grid-row: 1 / -1
+
+        width: 90%
+
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-row-gap: calc(2rem + 4vw)
+        justify-items: center
+        align-items: center
+
+        @media only screen and (max-width: $bp-700)
+            grid-row-gap: 3rem
+
+        @media only screen and (max-width: $bp-500)
+            grid-row-gap: 1rem
+
+    &__title
+        grid-column: 1 / -1
+
+    &__logo
+        height: 4.5rem
+        width: auto
+        line-height: 0
+
+        @media only screen and (max-width: $bp-700)
+            height: 3.5rem
+
+        @media only screen and (max-width: $bp-500)
+            height: 2.5rem
+
+        @media only screen and (max-width: $bp-400)
+            height: 2rem
+
+
+////// MISSION
+
+.mission
+    margin-top: -15rem
+    padding: calc(10rem + 12vw) 0 calc(6rem + 4vw) 
+    background-color: $color-white
+
+    display: grid
+    justify-items: center
+
+    @media only screen and (max-width: $bp-700)
+        margin-top: -7rem
+        padding: calc(8rem + 6vw) 0 calc(6rem + 4vw) 
+
+    &-wrapper
+        width: 75%
+
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-row-gap: 8rem
+        grid-column-gap: 5rem
+        justify-items: center
+
+        @media only screen and (max-width: $bp-700)
+            width: 85%
+            grid-column-gap: 3rem
+            grid-row-gap: 5rem
+
+    &__title
+        grid-column: 1 / -1
+
+    &__block
+        display: grid
+        grid-row-gap: 4rem
+
+        @media only screen and (max-width: $bp-700)
+            grid-column: 1 / -1
+            grid-row-gap: 2rem
+
+    &__p
+        &--main 
+            align-self: center
+
+            @media only screen and (max-width: $bp-700)
+                grid-column: 1 / -1
+                text-align: center
+
+/////// VECTOR SECTIONS - professionals + journeys
+
+.vector
+    &-sections        // grid for both professionals and journeys section
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(2, min-content)
+        grid-row-gap: 15rem
+        justify-items: center
+
+        @media only screen and (max-width: $bp-1300)
+            grid-row-gap: 0rem
+
+        @media only screen and (max-width: $bp-1200)
+            grid-row-gap: 15rem
+
+        @media only screen and (max-width: $bp-800)
+            grid-row-gap: calc(2rem + 4vw)
+
+        @media only screen and (max-width: $bp-700)
+            grid-row-gap: 15rem
+
+    &-bg
+        grid-column: 1 / -1
+        grid-row: 1 / -1
+        align-self: start
+
+    &-img
+        width: 100vw
+
+
+/////// PROFESSIONALS
+
+.professionals
+    &-wrapper
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+
+        width: 80%
+        padding: 15rem 0 0
+
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, min-content)
+        grid-row-gap: 8rem
+        grid-column-gap: 5rem
+        justify-items: center
+        align-items: center
+
+        @media only screen and (max-width: $bp-1200)
+            grid-template-rows: repeat(3, min-content)
+
+        @media only screen and (max-width: $bp-700)
+            width: 85%
+
+    &__title
+        grid-column: 1 / -1
+
+    &__text-box
+        display: grid
+        grid-template-rows: repeat(3, min-content)
+        grid-row-gap: 3rem
+
+        @media only screen and (max-width: $bp-1200)
+            grid-column: 1 / -1
+
+.professional
+    &__figure
+        max-width: 80%
+        height: 100%
+        background-image:  linear-gradient(to right bottom, rgba($color-primary, .4), rgba($color-blue, .2)), url(../images/james-filer.jpg)
+        background-size: cover
+        background-position: center center
+
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr
+
+        @media only screen and (max-width: $bp-1200)
+            height: 30rem
+            grid-column: 1 / -1
+            justify-self: center
+
+        @media only screen and (max-width: $bp-500)
+            width: 100%
+            height: 20rem
+
+        &-text 
+            width: 70%
+            padding: 1rem
+            text-align: justify
+
+            display: grid
+            grid-template-rows: repeat(2, min-content)
+            grid-row-gap: 1rem
+            align-self: end
+
+            @media only screen and (max-width: $bp-500)
+                width: 85%
+
+
+////// JOURNEYS/CARDS --> see _journeys.sass
+.journeys
+    grid-row: 2 / -1
+    grid-column: 1 / -1
+
+// GALLERY -->  see _gallery.sass
+
+
+////// FOOTER
+
+.footer
+    background: linear-gradient(to left top, $color-primary, $color-secondary)
+    padding: 20rem 5rem 15rem
+    margin: -12rem
+
+    display: grid
+    justify-items: center
+
+    @media only screen and (max-width: $bp-700)
+        margin: -5rem
+        padding: 10rem 5rem 5rem
+
+    &-wrapper
+        display: grid
+        grid-template-columns: repeat(2, minmax(15rem, 1fr))
+
+        width: 75%
+
+        grid-column-gap: 18rem
+        grid-row-gap: 5rem
+
+        @media only screen and (max-width: $bp-700)
+            grid-template-columns: 1fr
+            width: 90%
+
+    &__logo
+        grid-column: 1 / -1
+        width: 100%
+
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        grid-gap: 3rem
+        align-items: center
+
+        &::before,
+        &::after
+            content: ""
+            display: block
+            height: .8px
+            background-color: currentColor
+
+    &-nav
+        list-style: none
+
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 10rem))
+        justify-items: center
+        grid-row-gap: 5rem
+
+        @media only screen and (max-width: $bp-700)
+            grid-template-columns: repeat(4, 1fr)
+
+        &__icon
+            align-self: start
+            width: 6rem
+            height: 6rem
+            fill: $color-white
+            transition: all .2s ease-in-out
+
+            &:hover
+                fill: $color-grey-dark
+
+.copyright
+    align-self: center
+    justify-self: end
+
+    @media only screen and (max-width: $bp-1000)
+        align-self: start
+
+    @media only screen and (max-width: $bp-700)
+        grid-column: 1 / -1
+        text-align: center
+        margin-top: 10rem
+        margin-left: 0
+        justify-self: center
