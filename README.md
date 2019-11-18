@@ -8,7 +8,7 @@ The design and content for this project was done by me, in collaboration with de
 
 OneLife embodies my personal vision of a center based on a positive message of contribution to others through the taking care of oneself first, improving the mental and physical state of people.
 
-## Criteria
+## Goals
 - Specify the vision goals: determine how to translate them into design and content
 - Create a layout framework
 - Choose a color palette and design style
