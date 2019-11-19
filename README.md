@@ -25,7 +25,7 @@ Planning and undertaking a personal project stimulated my creativity whilst allo
 This led to an improvement of my ability to develop my own workflow, debug my own projects and to experiment with different solutions to a given problem.
 
 ## Run Locally
-- Run `git clone https://github.com/ERavazzolo/Rick-Veronese.git`
+- Run `git clone https://github.com/ERavazzolo/Onelife.git`
 - Run `npm install`
 - Run `npm start`
 
